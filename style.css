@@ -1,0 +1,670 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding-top: 30px;
+  border-bottom: 3px solid #fcac45;
+}
+
+/* .line {
+  width: 100px;
+  height: 3px;
+  background-color: #fcac45;
+  margin: 0 auto 85px auto;
+} */
+
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+header{
+  width: 100%;
+  background-color: #000;
+  display: flex;
+}
+
+
+.header__logo{
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 56px;
+  margin-left: 12%;
+}
+
+nav {
+  margin-top: 56px;
+  margin-left: 29%;
+}
+
+.topnav a {
+  color: #fff;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  color: #fcac45;
+}
+
+.topnav .icon{
+  display: none;
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main .main__welcome {
+  background: #000;
+  text-align: center;
+  padding: 200px 0 410px 0;
+}
+
+main .main__welcome p {
+  color:#b2b2b2;
+  font-size: 20px;
+}
+
+main .main__welcome h1 {
+  color:#999999;
+  font-size: 44px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+main .main__welcome h1:after {
+  display: none;
+}
+
+.mycompany {
+  color:#fcac45;
+  font-weight: 700;
+}
+
+.part {
+  color:#bfbfbf;
+  font-weight: 700;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+main .main__about {
+  display: flex;
+  padding: 100px 0 100px 0;
+}
+
+.about__right {
+  margin-left: 20%;
+}
+
+.about__right h1 {
+  display: inline-block;
+  border-bottom: 3px solid #fcac45;
+  padding-bottom: 20px;
+  font-size: 34px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.about__right h1:after {
+  display: none;
+}
+
+.about__right p {
+  margin: 30px 0 50px 0;
+  color: #6c6c6c;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about__right li {
+  background: url(img/mark.png) 0px no-repeat;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+.aboutus {
+  font-weight:bold;
+}
+
+.point {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.mw-100 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1343px) {
+  nav{
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 1166px) {
+  nav{
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 1018px) {
+  .topnav a{
+    display: none;
+  }
+  .topnav a.icon{
+    /* Чтобы прижать к правой части экрана */
+    float: right;
+    /* Чтобы прижать к правой части экрана */
+    margin-top:-17px;
+    display: block;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  .topnav.responsive{
+    position: relative;
+    top: 50px;
+    left: -280px;
+  }
+
+  header .topnav.responsive{
+    height: 340px;
+  }
+
+  .topnav.responsive a.icon{
+    position: absolute;
+    top: -50px;
+    right: -280px;
+  }
+
+  .topnav.responsive a{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  main .main__welcome{
+    padding: 50px 0 100px 0;
+  }
+
+  main .main__welcome p{
+    font-size: 14px;
+  }
+
+  main .main__welcome h1{
+    font-size: 25px;
+  }
+}
+
+
+.main_team {
+  background: #000;
+  color: #fff;
+  padding: 100px 0 165px 0;
+  text-align: center;
+}
+
+
+.main_team h1{
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  font-size: 44px;
+  font-weight: 600;
+}
+
+
+.team_cards {
+  display: flex;
+  margin: 80px auto 0 auto;
+
+}
+
+
+.photo {
+  width: 130px;
+  margin: 20px auto;
+}
+
+.card {
+  margin: 0 40px;
+}
+
+/* Кружок можно сделать вручную не использовав картинку:
+width: 130px;
+height: 130px;
+border-radius: 50%; */
+
+.card h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.position{
+  margin-bottom: 35px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.about_position{
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.main_services {
+  padding: 100px 0 100px 0;
+  text-align: center;
+}
+
+.main_services h1 {
+  font-size: 44px;
+  padding: 0 0 30px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main_services .line {
+  margin: 0 auto 55px auto;
+}
+
+.services_cards {
+  display: grid;
+  grid-template: 1fr / repeat(4,auto);
+  grid-column-gap: 50px;
+}
+
+.main_services p {
+  margin-bottom: 100px;
+  line-height: 1.5;
+  color: #6c6c6c;
+}
+
+.services_card p {
+  color: #000;
+}
+
+.circle {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 5px solid #fcac45;
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+  margin: 0 auto;
+}
+
+.services_card h4 {
+  margin: 30px 0 25px 0;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.services_card p {
+  margin-bottom: 0;
+}
+
+.main__clients {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 0 205px 0;
+  text-align: center;
+}
+
+.main__clients h1 {
+  font-size: 44px;
+  margin: 0 auto 30px auto;
+  font-weight: 100;
+}
+
+.main__clients .our_clients {
+  font-weight: 600;
+}
+
+.main__clients .line {
+  margin-bottom: 85px;
+}
+
+.clients img {
+  margin: 30px 0 0 30px;
+}
+
+
+
+.main__work {
+  padding: 100px 0 100px 0;
+  text-align: center;
+}
+
+.main__work h1 {
+  font-size: 44px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.main__work .our_work {
+  font-weight: 600;
+}
+
+.main__work p {
+  margin: 60px 0 178px 0;
+  font-size: 16px;
+  font-style: italic;
+  color: #6c6c6c;
+}
+
+/* Сетка без использования Grid и FlexBox */
+
+.gallery img {
+  margin: 0 15px 30px 15px;
+  transition: opacity 0.2s ease-in;
+}
+
+.gallery img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+/* Сетка на Grid */
+
+/* .gallery {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit или 4(но тогда дальше идет адаптация),
+  minmax(250px, 1fr));
+}
+
+.card__gallery {
+  position: relative;
+  padding: 0px 0px 90% 0px;
+  margin: 0 0 20px 0;
+}
+
+.card__gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1270px) {
+ .gallery {
+   grid-template-columns:repeat(2, minmax(250px, 1fr));
+ }
+}
+
+ @media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns:repeat(1, minmax(250px, 1fr));
+  }
+} */
+
+
+/* Сетка на FlexBox */
+
+/* .line_gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card__gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 15px; или gap:15px;
+}
+
+.card__gallery img {
+  max-width: 100%;
+  object-fit: cover;
+} */
+
+
+.main__testimonials {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0 170px 0;
+}
+
+.main__testimonials h1 {
+  font-size: 44px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.main__testimonials .our_clients {
+  font-weight: 500;
+}
+
+.main__testimonials p {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 115px 0 50px 0;
+}
+
+.main__testimonials h5 {
+  font-size: 18px;
+  color: #b2b2b2;
+  font-weight: 600;
+}
+
+.main__testimonials .CEO_Acme {
+  font-weight: 100;
+}
+
+
+.main__contact {
+  background-color: #fff;
+  padding: 100px 0 102px 0;
+  text-align: center;
+  color: #636363;
+}
+
+.contact_wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.main__contact h1 {
+  margin-bottom: 30px;
+  font-size: 44px;
+  color: #000;
+  font-weight: 600;
+}
+
+.contact_text {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 55px;
+}
+
+.red_text {
+  color: red;
+}
+
+.form_inputs {
+  display: flex;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.first_form_input,.second_form_input  {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.first_form_input {
+  margin-right: 30px;
+}
+
+.form_inputs input {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: 1px solid #999999;
+  color: #636363;
+  padding: 0px 10px;
+}
+
+.form_inputs p {
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.message_form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+textarea {
+  height: 165px;
+  border: 1px solid #999999;
+  color: #636363;
+  font-size: 16px;
+  padding: 10px;
+  resize: none;
+}
+
+.button_block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button_block input {
+  margin-top: 30px;
+  width: 165px;
+  height: 40px;
+  background-color: #fcac45;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button_block input:hover {
+  opacity: 0.8;
+}
+
+footer {
+  width: 100%;
+  background-color: #222222;
+  padding: 30px 0;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_social a {
+  margin-left: 13px;
+}
+
+.footer_social a:hover {
+  opacity: 0.6;
+}
+
+
+
+@media screen and (max-width: 1147px) {
+  .mw-100 {
+    max-width: 100%;
+  }
+  .main__about {
+    flex-direction: column;
+  }
+  .about__right{
+    text-align:center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .about__right li{
+    text-align: left;
+    font-size: 15px;
+  }
+  .about__right h1{
+    font-size: 25px;
+  }
+  .about__right p{
+    font-size: 15px;
+  }
+  .team_cards{
+    flex-direction: column;
+  }
+  .about_position{
+    margin-bottom: 30px;
+  }
+  .services_cards {
+    grid-template-columns: auto;
+    grid-row-gap: 50px;
+  }
+  .form_inputs {
+    flex-direction: column;
+  }
+  .first_form_input {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 803px) {
+  .line_gallery img:not(:first-child) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .clients img {
+    margin: 30px 0 0 0;
+  }
+}
